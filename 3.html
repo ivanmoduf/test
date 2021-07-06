@@ -1,0 +1,25 @@
+<html>
+<body>
+<input id="text" type="text" maxlength="100">
+<input id="but" type="button" value="Преобразовать">
+<script>
+var button = document.getElementById('but');
+button.onclick = function() {
+  let str = document.getElementById("text").value;
+  let div = document.createElement('div');
+  div.id = "str";
+  document.body.appendChild(div);
+  let d = document.getElementById("str");
+  str = replaced(lowCase(str));
+  d.innerHTML = str;
+  /*В этом задании я не совсем понял, как именно нужно релизовать поэтому воспользовался уже готовыми функциями JS*/
+  function lowCase(str) {
+    return str.toLowerCase();
+  }
+  function replaced(str) {
+    return str.split(' ').join('%20');
+  }
+};
+</script>
+</body>
+</html>

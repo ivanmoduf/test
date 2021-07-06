@@ -1,0 +1,23 @@
+<html>
+<body>
+<script>
+let arr = [0, 2, 5, 7, 1];
+var div = document.createElement('div');
+div.id = "max";
+document.body.appendChild(div);
+let result = findmax(arr);
+var d=document.getElementById("max");
+d.innerHTML=result;
+function findmax(array) {
+  var max = 0;
+  var a = array.length;
+  for (counter = 0; counter < a; counter++) {
+    if (array[counter] > max) {
+      max = array[counter];
+    }
+  }
+  return max;
+}
+</script>
+</body>
+</html>
